@@ -83,19 +83,26 @@ export const useSegmentNavigation = (): {
   const onSegmentChange = (value: string) => {
     switch (value) {
       case EditorEntityTab.QUERIES:
-        history.push(queryListURL({ basePageId }), {
-          invokedBy: NavigationMethod.SegmentControl,
-        });
+        setTimeout(() => {
+          history.push(queryListURL({ basePageId }), {
+            invokedBy: NavigationMethod.SegmentControl,
+          });
+        }, 0);
+
         break;
       case EditorEntityTab.JS:
-        history.push(jsCollectionListURL({ basePageId }), {
-          invokedBy: NavigationMethod.SegmentControl,
-        });
+        setTimeout(() => {
+          history.push(jsCollectionListURL({ basePageId }), {
+            invokedBy: NavigationMethod.SegmentControl,
+          });
+        }, 0);
         break;
       case EditorEntityTab.UI:
-        history.push(widgetListURL({ basePageId }), {
-          invokedBy: NavigationMethod.SegmentControl,
-        });
+        setTimeout(() => {
+          history.push(widgetListURL({ basePageId }), {
+            invokedBy: NavigationMethod.SegmentControl,
+          });
+        }, 0);
         break;
     }
   };
